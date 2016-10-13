@@ -5,16 +5,19 @@ package com.bc.mine.model.transactions;
  */
 public class Transaction {
 
+    private String blockId;
     private String concept;
     private int value;
 
     public Transaction() {
     }
 
-    public Transaction(String concept, int value) {
+    public Transaction(String blockId, String concept, int value) {
+        this.blockId = blockId;
         this.concept = concept;
         this.value = value;
     }
+
 
     public String getConcept() {
         return concept;
@@ -30,5 +33,13 @@ public class Transaction {
 
     public void setValue(int value) {
         this.value = value;
+    }
+
+    public String getBlockId() {
+        return blockId;
+    }
+
+    public void setBlockId(String blockId) {
+        this.blockId = blockId;
     }
 }
