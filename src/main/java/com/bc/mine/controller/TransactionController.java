@@ -1,5 +1,7 @@
 package com.bc.mine.controller;
 
+import com.bc.mine.model.transactions.Interval;
+import com.bc.mine.model.transactions.IntervalMessage;
 import com.bc.mine.model.transactions.Transaction;
 import com.bc.mine.model.transactions.TransactionMessage;
 import org.springframework.messaging.handler.annotation.MessageMapping;
@@ -17,6 +19,12 @@ public class TransactionController {
     @SendTo("/topic/transactions")
     private Transaction transaction(TransactionMessage message) throws Exception{
         return new Transaction("Transaction: " + message.getConcept() + " -> " + message.getValue());
+    }
+
+    @MessageMapping("/interval")
+    @SendTo("/topic/transactions")
+    private Interval interval(IntervalMessage message) throws Exception{
+        return new Interval(message.getConcept() + ": " + message.getInterval());
     }
 
 }

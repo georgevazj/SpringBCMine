@@ -78,5 +78,6 @@
     <orderEntry type="library" name="Maven: org.webjars:stomp-websocket:2.3.3" level="project" />
     <orderEntry type="library" name="Maven: org.webjars:bootstrap:3.3.7" level="project" />
     <orderEntry type="library" name="Maven: org.webjars:jquery:3.1.0" level="project" />
+    <orderEntry type="library" name="Maven: joda-time:joda-time:2.9.4" level="project" />
   </component>
 </module>
