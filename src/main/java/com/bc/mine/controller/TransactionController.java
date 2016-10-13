@@ -18,7 +18,7 @@ public class TransactionController {
     @MessageMapping("/transaction")
     @SendTo("/topic/transactions")
     private Transaction transaction(TransactionMessage message) throws Exception{
-        return new Transaction("Transaction: " + message.getConcept() + " -> " + message.getValue());
+        return new Transaction(message.getConcept(),message.getValue());
     }
 
     @MessageMapping("/interval")

@@ -5,20 +5,30 @@ package com.bc.mine.model.transactions;
  */
 public class Transaction {
 
-    private String content;
+    private String concept;
+    private int value;
 
     public Transaction() {
     }
 
-    public Transaction(String content) {
-        this.content = content;
+    public Transaction(String concept, int value) {
+        this.concept = concept;
+        this.value = value;
     }
 
-    public String getContent() {
-        return content;
+    public String getConcept() {
+        return concept;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setConcept(String concept) {
+        this.concept = concept;
+    }
+
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
     }
 }
